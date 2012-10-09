@@ -1,0 +1,25 @@
+Elana Braff and Brian Battell
+Test Plan for sorted-list
+
+1) First we malloc each item and insert them into the list, casting them as void*.
+	Inserted: 53,42,12,43,32
+
+2) Create new iterator and print the list, it should print as:
+	53,43,42,32,12
+
+3) Then we remove 53, 42, and 12
+
+4) Create new iterator and print list:
+	43,32
+
+5) Then we remove 43 and 32.
+
+6) Then we create a new iterator for the empty list and print an error message if the iterator points to an empty list:
+	"The list is Empty!!"
+
+7) Once the list is empty we free our objects, list, and iterator from main.
+
+Notes: 
+	⁃	All objects must be free'd from main after nodes have been removed from the list.
+	⁃	All nodes must be removed from the list before the list is destroyed, done from main.
+	⁃	Iterators are free'd by the calling function.
